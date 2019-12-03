@@ -1,0 +1,12 @@
+{
+    "name":"manu",
+    "age":30,
+    "company":"MYOWNCOMPANY",
+    "salary":100000   ,
+    "post":"manager"
+}  
+{
+    "key": "cmd+b",
+    "command": "HookyQR.beautify",
+    "when": "editorFocus"
+  }

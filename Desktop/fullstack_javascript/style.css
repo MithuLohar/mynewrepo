@@ -1,0 +1,23 @@
+body
+{
+    background:linear-gradient(to right,blue,red)
+  
+}    
+.card
+{
+    width:24%;
+    float: left;
+    margin:5px;
+    height:100vh;
+}   
+h1
+{
+    font-size: 100px;
+    color: white;
+    text-align: center;
+}
+#template
+{
+    display: flex;
+    justify-content: center;
+}
