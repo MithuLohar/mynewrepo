@@ -2,27 +2,28 @@
 window.SpeechRecognition=window.SpeechRecognition||window.webkitSpeechRecognition;
 var recognition=new SpeechRecognition();
 
-// var p=document.createElement('p');
+var p=document.createElement('p');
 
-// var words=document.getElementById("word");
+var words=document.getElementById("word");
 
-// words.appendChild(p);
-// console.log(words);
+words.appendChild(p);
+console.log(words);
 
 recognition.addEventListener("result",e=>{
     console.log(e.results);
-    var transscript=[...e.results]
+    var transcript=[...e.results]
     .map(result=>result[0])
     .map (result=> result.transcript)
     .join("");
     if (e.results[0].isFinal) {
         p=document.createElement("p");
         words.appendChild(p);
-        p.innerHTML=transscript;
+        p.innerHTML=transcript;
     }
  
 
 });//DOM methid
-// recognition.addEventListener('end',recognition.start)
+recognition.addEventListener("end",recognition.start);
 recognition.start();//starting speech recognition...
 
+console.log(document)
