@@ -1,0 +1,628 @@
+var str="mithu";
+var str2=`lohar`;
+var str3=new String("rio");
+console.log(typeof str);
+console.log(typeof str2);
+console.log(typeof str3.valueOf);
+
+
+
+var num=10;
+var num1=10.9;
+console.log(typeof num);
+console.log(typeof num1);
+var num2=new Number(10);
+console.log(typeof num2);
+ var arr=["mithu",23,true,{},function(){}]
+var arr2=["java","javascript","css","angular"]
+var str="javascript";
+ var spilType=str.split("");//Es5 way
+var es6way=Array.from(str);//creats an array from an iterable object
+ var [...newway]=str;
+ arr.forEach(x => console.log(x))
+ es6way.forEach(x => console.log(x))
+ console.log(Array.isArray(newway));
+ newway.forEach(function (x)
+ {
+	 console.log(x);
+ });
+  var totalarr=arr.concat(arr2);//concat method:- combine two or more array (ES5 way)
+  var es6array=[...arr,...arr2,...str];//es6 way
+
+  console.log(es6array);
+var arrtostr=arr.toString();
+var onemorewattoconvertArrtostr=arr.join(`😈🐭`);
+console.log(arrtostr);
+console.log(typeof arrtostr);
+console.log(onemorewattoconvertArrtostr);
+console.log(typeof onemorewattoconvertArrtostr);
+var arr3= Array.of("java","c","C#","c++",)
+console.log(arr3);
+var arr4=Array(7);
+console.log(arr4);
+
+
+window
+.fetch("http://https://api.github.com/users")
+.then(data =>{
+  data.json().then(item =>{
+    console.log(item)
+  }).catch(err =>console.log(err))
+}).catch(err =>console.log(err));
+
+
+
+var username;
+ console.log(typeof username);
+
+ var testnull=null;
+ console.log(typeof testnull);
+
+ var bool=true;
+ console.log(bool);
+
+ var bool1 =new Boolean();
+ console.log(typeof bool1);
+
+
+
+// var obj={
+//   name:"mithu",
+//   Age:22,
+//   company:"JSpiders",
+//   salary:10000,
+//   skills:["c","c++","python","AWS"]
+// }
+
+// obj.name="Stryker";
+// console.log(typeof obj);
+// console.log(obj.name);
+// console.log(obj.skills);
+// console.log(obj["salary"])
+// console.log(obj.skills [0]);
+
+// var user=[{
+  
+//     name:"mithu",
+//     Age:22,
+//     company:"JSpiders",
+//     salary:10000,
+//     skills:["c","c++","python","AWS"]
+   
+
+// }  ,{
+//   name:"de@dSh0T",
+//     Age:22,
+//     company:"Suide squad",
+//     salary:100000,
+//     skills:["c","c++","python","AWS"]
+// }]
+// console.log(user);
+
+// var obj1=new Object();
+// obj1.name="Kumar";
+// obj1.salary=100000;
+// console.log(obj1);
+
+// var test=Object.entries(obj1);
+// console.log(test);
+
+// var empdata=
+// {
+//   Ename:"Styker",
+//   age:23,
+//   location:"BTM",
+// salary:100000,
+// datjoin:new Date('2015/05/4'),
+// designation:"developer",
+// ed:"PHD",
+// company:"ikea",
+// Id:"1501219047SD",
+// empdetails:function(){
+// document.write(`
+// <h1>my name is 👻👑${this.Ename}🐺🤣💀</h1>
+
+// <ul>
+// <li>my age is ${this.age}</li>
+// <li>🏛${this.location}</li>
+// <li>💰${this.salary}</li>
+// <li>📆${this.datjoin}</li>
+// <li>👑${this.designation}</li>
+// <li>📚${this.ed}</li>
+// <li>🖥${this.company}</li>
+// <li>💁${this.Id}</li>
+
+// </ul>`)
+// }
+
+// }
+// empdata.empdetails();
+
+for(var i=0;i<=10;i++)
+{
+    let username="mithu";
+    console.log(i);
+} 
+console.log(username);//block scope
+
+function user()
+{
+  var age=20;
+  console.log(age);
+}  //function scope
+user();
+
+
+console.log(username);
+let username="mithu";//Uncaught ReferenceError: Cannot access 'username' before initialization
+
+
+
+const user="mithu";
+const user="Stryker";
+console.log(user);//Uncaught SyntaxError: Identifier 'user' has already been declared
+
+
+
+
+
+let username="stryker";
+let username="mithu";
+console.log(username);//Uncaught SyntaxError: Identifier 'username' has already been declared
+
+
+
+
+
+
+var name="dfbhbrgu";
+var name="nidniebuie";
+console.log(name);
+
+
+
+function Id() 
+{
+  alert("hello fuction")
+}//called part
+
+
+  Id()//calling part
+
+
+
+(function () {
+    document.write('test')
+    var test="hello";
+  })();
+{
+  document.write(``)
+}
+
+
+function username(name,age,company,salary) {
+    console.log(`my name is ${name}
+    age is ${age}
+    i work in ${company}
+    and getting ${salary}`);
+} 
+username("mithu",30,"PUBG",300000000);//parameter values
+
+
+
+function addNumber(a,b) {
+    var c=a+b;
+    return c;
+}
+console.log(addNumber(3,5));//fuction with return
+
+
+When JavaScript reaches a return statement, the function will stop executing.
+
+If the function was invoked from a statement, JavaScript will "return" to execute the code after the invoking statement.
+
+Functions often compute a return value. The return value is "returned" back to the "caller":
+
+
+fuction with default value
+{
+  function number(num) {
+    if (num===undefined) {
+        num=10*2;
+    }
+    console.log(num);
+}
+number();
+
+
+
+function numberwithES6(num1=10) {
+    
+    console.log(num1);
+}
+numberwithES6();
+}
+
+
+parameter default value es6
+the default value of the parameter is undefined.
+ECMAScript 6 introduced default parameter for the fuction.
+
+
+// function addNumber(a,b) {
+//     var c=a+b;
+//     return c;
+// }
+// console.log(addNumber(3,5));
+
+
+function number(num) {
+    if (num===undefined) {
+        num=10*2;
+    }
+    console.log(num);
+}
+number();
+
+
+
+function numberwithES6(num1=10) {
+    
+    console.log(num1);
+}
+numberwithES6();
+
+fuction argument do not use java script reserved keywards
+
+
+
+arguement object
+
+the arguement object is arguement special construct available inside all fuction calls.
+it represents the list of arguements that were pased in when invoking the fuction .since javascript 
+allows fuction to be called with any number args,we neeed a way to dynamically discover and access them
+
+function user(arg) {
+    console.log("my name is ",arg);
+    console.log(typeof arguments);
+    console.log(arguments.length);
+    var [...user]=arguments;
+    user.forEach(function (user) {
+       console.log(user); 
+    });
+}  
+user("mithu","deadshot","Stryker","1996")
+
+
+
+
+
+
+
+
+Hoidsting ia a java script mechanism of autualli swapping of calld fuction goes up and calling function comes down 
+it works only in naming fuction regardless of there scope is local or global.
+
+
+name();
+function name() {
+    console.log("my name is mithu💀")
+}//fuction hoisting
+
+
+company();
+var company=function () {
+    console.log("mithu☠️");
+}//Uncaught TypeError: company is not a function
+
+
+fuction closure 
+"when variable of one fuction intersects with another fuction then it is called function closure"
+
+a closure is a function having access to the parent scope.
+it preserve the data from outside
+A closure is an inner function that has access to the outer (enclosing) function"s variable .for every closure we have three scope 
+>Local Scope (own Scope)
+>outer Function Scope 
+>Global Scope 
+
+
+{
+  var x="hello X";//global
+
+function show() {
+  var outerText="hello outer block";
+  console.log(innerBlock);//local
+
+  function innerBlock() {
+      var innerText="hello innerBlock";
+      console.log(innerText);
+      console.log(outerText);//closure
+      console.log(x);
+  }   
+  innerBlock();
+} 
+show();
+}
+
+function test() {
+    document.write("hello fuction");
+}//normal fuction
+()=>
+{
+
+}  //only support anonymous fuction
+
+FAT AROW fuction
+{
+  if one line fuction remove curly braces
+  if one arguement remove paranthesis
+  in return statement is only line remove return
+}
+
+normal fuction is having arguement object.FAT AROW dont have Arguement object
+
+var username=function (...arguments) {
+  return arguments.forEach(x=>console.log(x)) 
+};    
+console.log(username("mithu","AWm"));//normal fuction
+
+
+ var usernamewithES6=(...args)=> {
+     return args.forEach(x=>console.log(x));
+ };   
+ console.log(usernamewithES6("Stryker","DEADSHOT"));
+ //FAT AROW fuction
+
+
+arrow fuction were introduced with ES6 as a new syntax 
+for writing java script fction .
+they save developer time and simplify function Scope;
+
+
+Arrow function (often referd as fat arrow fuction are lamda function)
+are a concise way of writting function that donot rebined context(this)
+within other function.their short syntax is further enhance by their ability to return value impliciltly 
+in one line, single return fuctions
+
+
+
+var user=
+// {
+//     name:"mithu",
+//     age:20,
+//     company:"Jspiders",
+//     userINFO:function () {
+//         console.log(`name is ${this.name}
+//         age is ${this.age} 
+//         working at ${this.company}`);
+//     }
+// };
+
+// var user1=
+// {
+//     name:"mithu",
+//     age:20,
+//     company:"Jspiders",
+//     userINFO: ()=> {
+//         console.log(`name is ${user1.name}
+//         age is ${user1.age} 
+//         working at ${user1.company}`);
+//     }
+// }; 
+// user.userINFO();
+// user1.userINFO();
+
+
+
+callbAck function
+[
+  function show() {
+    console.log('hello show function')
+}  
+function showcallback(callback) {
+    callback()
+}//called
+ showcallback(show);//calling another function
+]
+
+
+
+
+
+
+[ <object oriented programe>
+
+  function user(name,age,company,salary,designaton) 
+{
+    this.name=name;
+    this.age=age;
+    this.company=company;
+    this.salary=salary;  
+    this.designaton=designaton;  
+}
+let user1=new user("mithu",20,"jspiders",300000,"Angular developer");
+let user2=new user("mithu",20,"jspiders",300000,"nodejs developer");
+console.log(user1);
+console.log(user2);//object oriented programe
+
+
+
+
+]
+
+
+
+function user(name,age,company,salary,designaton) 
+{
+    this.name=name;
+    this.age=age;
+    this.company=company;
+    this.salary=salary;  
+    this.designaton=designaton;  
+}
+let user1=new user("mithu",20,"jspiders",300000,"Angular developer");
+let user2=new user("mithu",20,"jspiders",300000,"nodejs developer");
+console.log(user1);
+console.log(user2);//object oriented programe
+
+
+
+
+
+
+
+
+array method
+[// language.pop();//delete last element
+// language.shift();//delete first element
+// language.push("nodejs");//add new elements in last position
+// language.unshift("Angular")//ad  new element in first position
+language.splice(1,0,"reactJS");//Removes elements from an array and,
+ if necessary, inserts new elements in their place, returning the deleted elements.]
+
+
+
+ language.forEach(function (value,index,array) 
+{  
+ console.log(`${index}:${value}`)
+});
+
+var language=["java","HTML","python","javascript","c++"];
+// for (let i = 0; i < language.length; i++) {
+//     console.log(language[i])
+    
+// }
+filter method
+{
+  (method) Array<string>.indexOf(searchElement: string, fromIndex?: number): number
+Returns the index of the first occurrence of a value in an array.
+
+@param searchElement — The value to locate in the array.
+
+@param fromIndex — The array index at which to begin the search. If fromIndex is omitted,the search starts at index 0.
+   the filter() method creates an array filled with all array elements that pass a test(provided as a fuction)
+   Note:filter() does not execute the function for array element without value
+   nOTE:FILTER() does not chage the original array
+   Syntax
+   var newArray=arr.filter(callbAck(element[,index[,array]])[,thisArg])
+
+
+   var language=["java","java","java","python","python","python","python"];
+var num=[1,5,7,109,40,20,50,60,1001,4001];
+var result=num.filter(x=>x>50);
+var testresult= language.filter(function (value,index,array) {
+    return array.indexOf(value)===index;
+});
+console.log(testresult);
+console.log(result);
+   }
+
+
+   the set object lets you store unique values of any type,whether primitive value or object ReferenceError
+   Syntax 
+   new Set([iterable]);
+
+Es6-array method reduce()
+reduce() method applies a function simultaneously against two values of the array(from left -to-right)
+as to reduce it to a singlr value
+the reduce()  method execute a reducer function (that you provide ) on each element of the array ,
+resulting in a single output value.
+
+const array1=[1,2,3,4];
+conat reducer =(accumulator,currentValue)=>
+accumulator+currentValue;
+var numbers=[10,40,500,600,20,50,43,600,200]
+var test= numbers.reduce((a,b)=>{
+    
+    return a+b;
+    
+});
+console.log(test);
+
+
+
+The Find() method returns the value of the first element in the provided array
+that satisfies the provided testing function.
+const array1=[5,12,8,130,44];
+const found=array1.Find(element=>element >10);
+console.log(found);
+Syntax
+arr.find(callbAck[,index[,array]])[,thisArg]
+
+the fill() method fill(modifies) all the elements 
+of an array from a start index (default zero) to an end index(default array length) 
+with static value 
+
+for of loop
+{
+  the for ... of statement creates a loop iterable over iterable Object,including:built-in String,
+  Array, array-like object (eg,arguement or nodelist)
+  typedArray ,map, Set and user-defined iterables.
+  It invokes a custom  iterator hook with Statements to b executed 
+  for the value of each distinct property of the object 
+  Syntax 
+  for(variable of iterable)
+  {
+    Statements
+  }
+}
+
+the map() method creates a new array with the result of calling 
+a provided function
+on every element in the calling array
+
+Syntax
+var new_array =arr.map(function callbAck (curre [index[args]]))
+
+map and forEachyoy can use both map() and foreach() interchangebly.
+the biggest diffrece is that foreach() allows the mutation of original Array
+
+while map() returns a new array of sam size.
+map() ia also faster.But it is entirely 
+up to you to decide which one work better for you
+
+
+
+var numbers=[10,40,500,600,20,50,43,600,200];
+var lang=["jee","angular","React","node","AWS"];
+var key=lang.keys();
+var values=lang.values();
+// // for(let x of numbers)
+// // {
+// //     console.log(x);
+// // }
+// console.log(key);
+// for (const y of key) {
+//     console.log(y); 
+// }  
+// for (const x of values) {
+//     console.log(x);
+// }
+
+var foreach=lang.forEach(x=>x);
+console.log(foreach);
+ 
+var map=numbers.map(x=>x*2);
+console.log(map);
+
+creates a javascript Date instance that represents a single moment in time in
+platform-independent format.
+Date object contain a number that represents millisecond since one jan 1970 UTC
+Syntax
+ new Date();
+ new Date(value);
+ new Date(dateString);
+ new Date(year,monthIndex);
+No parametera 
+when no parameter are provided , the newly-created Date
+ object represents
+ the current date and time as of the of instantiation
+
+
+
+
+
+
+
+
